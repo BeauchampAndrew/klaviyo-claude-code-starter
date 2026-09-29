@@ -1,0 +1,10 @@
+# Your API key lives here. Never commit it.
+.env
+
+# Anything Claude pulls or writes while working: exports, reports, drafts.
+# Can contain customer emails and order data.
+work/
+*.ndjson
+
+.DS_Store
+__pycache__/

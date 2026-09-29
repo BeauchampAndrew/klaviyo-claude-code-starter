@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bin/klaviyo --help)",
+      "Bash(bin/klaviyo * --help)",
+      "Bash(bin/klaviyo account-health*)",
+      "Bash(bin/klaviyo list-*)",
+      "Bash(bin/klaviyo get-*)",
+      "Bash(bin/klaviyo search-*)",
+      "Bash(bin/klaviyo segment-count*)",
+      "Bash(bin/klaviyo segment-sizes*)",
+      "Bash(bin/klaviyo segment-members*)",
+      "Bash(bin/klaviyo metrics*)",
+      "Bash(bin/klaviyo metric-aggregate*)",
+      "Bash(bin/klaviyo campaign-performance*)",
+      "Bash(bin/klaviyo flows*)",
+      "Bash(bin/klaviyo flow-*)",
+      "Bash(bin/klaviyo form-performance*)",
+      "Bash(bin/klaviyo events*)",
+      "Bash(bin/klaviyo export-events*)",
+      "Bash(bin/klaviyo suppression-jobs*)",
+      "Bash(bin/klaviyo api GET *)",
+      "Bash(bin/klaviyo --json account-health*)",
+      "Bash(bin/klaviyo --json list-*)",
+      "Bash(bin/klaviyo --json get-*)",
+      "Bash(bin/klaviyo --json search-*)",
+      "Bash(bin/klaviyo --json segment-count*)",
+      "Bash(bin/klaviyo --json segment-sizes*)",
+      "Bash(bin/klaviyo --json segment-members*)",
+      "Bash(bin/klaviyo --json metrics*)",
+      "Bash(bin/klaviyo --json metric-aggregate*)",
+      "Bash(bin/klaviyo --json campaign-performance*)",
+      "Bash(bin/klaviyo --json flows*)",
+      "Bash(bin/klaviyo --json flow-*)",
+      "Bash(bin/klaviyo --json form-performance*)",
+      "Bash(bin/klaviyo --json events*)",
+      "Bash(bin/klaviyo --json suppression-jobs*)",
+      "Bash(bin/klaviyo --json api GET *)"
+    ],
+    "deny": [
+      "Read(./.env)"
+    ]
+  }
+}

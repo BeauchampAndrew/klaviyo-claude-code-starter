@@ -1,0 +1,49 @@
+{
+  "condition_groups": [
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<ORDERED_PRODUCT>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "greater-than",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "alltime"
+          },
+          "metric_filters": [
+            {
+              "property": "Categories",
+              "filter": {
+                "type": "list",
+                "operator": "contains-any",
+                "value": [
+                  "<CATEGORY_NAME>"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-marketing-consent",
+          "consent": {
+            "channel": "email",
+            "can_receive_marketing": true,
+            "consent_status": {
+              "subscription": "any",
+              "filters": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

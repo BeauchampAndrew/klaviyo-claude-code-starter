@@ -1,0 +1,150 @@
+{
+  "condition_groups": [
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<MANUALLY_SUPPRESSED>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "greater-than",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "alltime"
+          },
+          "metric_filters": null
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<MANUALLY_SUPPRESSED>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "equals",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "in-the-last",
+            "unit": "day",
+            "quantity": 30
+          },
+          "metric_filters": null
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-marketing-consent",
+          "consent": {
+            "channel": "email",
+            "can_receive_marketing": false,
+            "consent_status": {
+              "subscription": "any",
+              "filters": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<PLACED_ORDER>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "greater-than",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "in-the-last",
+            "unit": "day",
+            "quantity": 30
+          },
+          "metric_filters": null
+        },
+        {
+          "type": "profile-metric",
+          "metric_id": "<ADDED_TO_CART>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "greater-than",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "in-the-last",
+            "unit": "day",
+            "quantity": 30
+          },
+          "metric_filters": null
+        },
+        {
+          "type": "profile-metric",
+          "metric_id": "<CHECKOUT_STARTED>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "greater-than",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "in-the-last",
+            "unit": "day",
+            "quantity": 30
+          },
+          "metric_filters": null
+        },
+        {
+          "type": "profile-metric",
+          "metric_id": "<VIEWED_PRODUCT>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "greater-than",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "in-the-last",
+            "unit": "day",
+            "quantity": 30
+          },
+          "metric_filters": null
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<UNSUBSCRIBED_FROM_EMAIL>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "equals",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "alltime"
+          },
+          "metric_filters": null
+        }
+      ]
+    }
+  ]
+}

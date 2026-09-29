@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Runs klaviyo-cli (https://github.com/BeauchampAndrew/klaviyo-cli) with the
+# API key from this folder's .env. Nothing to install beyond uv.
+#
+#   bin/klaviyo account-health
+#   bin/klaviyo --json list-campaigns --days 30
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+if [ -f "$ROOT/.env" ]; then
+  set -a; . "$ROOT/.env"; set +a
+fi
+
+if [ -z "${KLAVIYO_API_KEY:-}" ] || [ "${KLAVIYO_API_KEY}" = "pk_your_key_here" ]; then
+  if [ -z "${KLAVIYO_PROFILE:-}" ] && [ ! -f "${XDG_CONFIG_HOME:-$HOME/.config}/klaviyo-cli/config.toml" ]; then
+    echo "No Klaviyo API key yet. Run: cp .env.example .env, then paste your pk_ key into .env" >&2
+    exit 1
+  fi
+  unset KLAVIYO_API_KEY
+fi
+
+if ! command -v uvx >/dev/null 2>&1; then
+  echo "uv is not installed. Install it with: curl -LsSf https://astral.sh/uv/install.sh | sh" >&2
+  exit 1
+fi
+
+exec uvx -q --from 'klaviyo-cli>=0.7' klaviyo "$@"

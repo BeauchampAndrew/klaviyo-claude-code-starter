@@ -1,0 +1,134 @@
+{
+  "condition_groups": [
+    {
+      "conditions": [
+        {
+          "type": "profile-marketing-consent",
+          "consent": {
+            "channel": "email",
+            "can_receive_marketing": true,
+            "consent_status": {
+              "subscription": "any",
+              "filters": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<RECEIVED_EMAIL>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "greater-than-or-equal",
+            "value": 10
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "alltime"
+          },
+          "metric_filters": null
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<OPENED_EMAIL>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "equals",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "in-the-last",
+            "unit": "day",
+            "quantity": 270
+          },
+          "metric_filters": null
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<CLICKED_EMAIL>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "equals",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "in-the-last",
+            "unit": "day",
+            "quantity": 270
+          },
+          "metric_filters": null
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<ACTIVE_ON_SITE>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "equals",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "in-the-last",
+            "unit": "day",
+            "quantity": 270
+          },
+          "metric_filters": null
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-metric",
+          "metric_id": "<PLACED_ORDER>",
+          "measurement": "count",
+          "measurement_filter": {
+            "type": "numeric",
+            "operator": "equals",
+            "value": 0
+          },
+          "timeframe_filter": {
+            "type": "date",
+            "operator": "alltime"
+          },
+          "metric_filters": null
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "type": "profile-property",
+          "property": "created",
+          "filter": {
+            "type": "date",
+            "operator": "at-least",
+            "unit": "day",
+            "quantity": 270
+          }
+        }
+      ]
+    }
+  ]
+}
